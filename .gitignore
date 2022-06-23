@@ -1,0 +1,6 @@
+node_modules/
+ecosystem.config.js
+connect.sh
+deploy.sh
+_deploy/
+.DS_Store
