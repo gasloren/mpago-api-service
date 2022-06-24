@@ -30,9 +30,9 @@ class PaymentStatus {
         try {
           const { accessToken, requestId } = req.body;
           const url = `${URL}/${requestId}`;
-          const data = await axios.get(url, {
+          const { data } = await axios.get(url, {
             headers: {
-              'Authorization': `Bearer ${accessToken}`
+              Authorization: `Bearer ${accessToken}`
             }
           });
           res.status(200).json({ data });
