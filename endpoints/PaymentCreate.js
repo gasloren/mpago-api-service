@@ -10,7 +10,7 @@ const checkValidationsErrors = require('../validators/check-validations-errors')
 class PaymentCreate {
 
   constructor(server) {
-    this.path = '/mercadopago/payment/create';
+    this.path = '/mpago/payment/create';
     this.server = server;
     this.route();
   }

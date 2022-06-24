@@ -12,7 +12,7 @@ const mpPaymentsUrl = process.env.MP_REQUEST_PAYMENT;
 class PaymentStatus {
 
   constructor(server) {
-    this.path = '/mercadopago/payment/status';
+    this.path = '/mpago/payment/status';
     this.server = server;
     this.route();
   }
