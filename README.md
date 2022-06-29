@@ -2,7 +2,7 @@
 
 ### Endpoints
 ` /mpago/payment/create `\
-` /mpago/payment/status `
+` /mpago/payment/status `
 
 - Mercado Pago SDK
 - Only localhost requests
