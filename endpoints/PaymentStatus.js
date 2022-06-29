@@ -1,9 +1,9 @@
 const axios = require('axios');
 
-const validAuthApiKeyToken = require("../validators/valid-auth-api-key-token");
+const validApiKey = require("../validators/valid-api-key");
 const validAccessToken = require("../validators/valid-access-token");
 const validRequestId = require("../validators/valid-request-id");
-const checkValidationsErrors = require("../validators/check-validations-errors");
+const checkErrors = require("../validators/check-errors");
 
 const mpPaymentsUrl = process.env.MP_REQUEST_PAYMENT;
 
@@ -21,10 +21,10 @@ class PaymentStatus {
     this.server.post(
       this.path,
       [
-        ...validAuthApiKeyToken,
+        ...validApiKey,
         ...validAccessToken,
         ...validRequestId,
-        checkValidationsErrors
+        checkErrors
       ],
       (req, res) => {
         const { accessToken, requestId } = req.body;

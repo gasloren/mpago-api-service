@@ -2,7 +2,7 @@ const { validationResult } = require('express-validator');
 
 // ----------------------------------------------
 
-const checkValidationsErrors = (req, res, next) => {
+const checkErrors = (req, res, next) => {
 
   const errors = validationResult(req);
 
@@ -16,4 +16,4 @@ const checkValidationsErrors = (req, res, next) => {
 
 };
 
-module.exports = checkValidationsErrors;
+module.exports = checkErrors;

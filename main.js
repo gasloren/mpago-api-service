@@ -4,6 +4,6 @@ const Server = require('./startup/Server');
 
 const server = new Server();
 
-server.listen();
+setTimeout(() => server.listen(), 1000);
 
 server.onExit();

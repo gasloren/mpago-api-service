@@ -1,9 +1,9 @@
 const Payment = require('../controllers/Payment');
 
-const validAuthApiKeyToken = require('../validators/valid-auth-api-key-token');
+const validApiKey = require('../validators/valid-api-key');
 const validPreference = require('../validators/valid-preference');
 const validAccessToken = require('../validators/valid-access-token');
-const checkValidationsErrors = require('../validators/check-validations-errors');
+const checkErrors = require('../validators/check-errors');
 
 // ------------------------------------------
 
@@ -19,10 +19,10 @@ class PaymentCreate {
     this.server.post(
       this.path,
       [
-        ...validAuthApiKeyToken,
+        ...validApiKey,
         ...validAccessToken,
         ...validPreference,
-        checkValidationsErrors
+        checkErrors
       ],
       async (req, res) => {
         try {

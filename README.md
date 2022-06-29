@@ -1,9 +1,8 @@
-# Mercado Pago API Service
+# Mercado Pago Micro Service API
 
 ### Endpoints
-- /mercadopago/payment/create
-- /mercadopago/payment/status
+` /mpago/payment/create `
+` /mpago/payment/status `
 
-### Requests
-- Auth secret API key token will be required on incomming requests.
-- Only direct server local requests will be accepted.
+- Only localhost requests
+- Header api key needed
